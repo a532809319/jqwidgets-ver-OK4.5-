@@ -1,0 +1,78 @@
+{
+    "dataList": [
+        {
+            "id": "747628386380914688",
+            "idx": 1,
+            "memo": "短信状态：未审核",
+            "saas_id": "aresoft",
+            "status": "1",
+            "name": "未审核",
+            "value": "0",
+            "type": "sms_status_list"
+        },
+        {
+            "id": "747628713622880256",
+            "idx": 2,
+            "memo": "短信状态：待发送",
+            "saas_id": "aresoft",
+            "status": "1",
+            "name": "待发送",
+            "value": "1",
+            "type": "sms_status_list"
+        },
+        {
+            "id": "747629163185864704",
+            "idx": 3,
+            "memo": "短信状态：投递成功",
+            "saas_id": "aresoft",
+            "status": "1",
+            "name": "投递成功",
+            "value": "2",
+            "type": "sms_status_list"
+        },
+        {
+            "id": "747630140402380800",
+            "idx": 4,
+            "memo": "短信状态：投递失败",
+            "saas_id": "aresoft",
+            "status": "1",
+            "name": "投递失败",
+            "value": "3",
+            "type": "sms_status_list"
+        },
+        {
+            "id": "747630605793554432",
+            "idx": 5,
+            "memo": "短信状态：发送成功",
+            "saas_id": "aresoft",
+            "status": "1",
+            "name": "发送成功",
+            "value": "4",
+            "type": "sms_status_list"
+        },
+        {
+            "id": "747631035545133056",
+            "idx": 6,
+            "memo": "短信状态：发送失败",
+            "saas_id": "aresoft",
+            "status": "1",
+            "name": "发送失败",
+            "value": "5",
+            "type": "sms_status_list"
+        },
+        {
+            "id": "747631510742278144",
+            "idx": 7,
+            "memo": "短信状态：手机号有误",
+            "saas_id": "aresoft",
+            "status": "1",
+            "name": "手机号有误",
+            "value": "9",
+            "type": "sms_status_list"
+        }
+    ],
+    "totalCount": 7,
+    "page": 1,
+    "pageSize": 20,
+    "totalPage": 1
+}

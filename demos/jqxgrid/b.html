@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title id='Description'>This example shows how to create a Grid from JSON data.</title>
+    <link rel="stylesheet" href="../../jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="../../scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxgrid.columnsresize.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../../scripts/demos.js"></script>
+<!--
+    <script type="text/javascript" src="../../jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxgrid.selection.js"></script>-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var url = "../sampledata/beverages.txt";
+
+            // prepare the data
+            var source =
+                {
+                    datatype: "json",
+                    datafields: [
+                        { name: 'name', type: 'string' },
+                        { name: 'type', type: 'string' },
+                        { name: 'calories', type: 'int' },
+                        { name: 'totalfat', type: 'string' },
+                        { name: 'protein', type: 'string' }
+                    ],
+                    id: 'id',
+                    url: url
+                };
+            var dataAdapter = new $.jqx.dataAdapter(source);
+
+            $("#jqxgrid").jqxGrid(
+                {
+                    width: 850,
+                    source: dataAdapter,
+                    columnsresize: true,
+                    pageable: true,
+                    sortable: true,
+                    //  autoheight: true,
+//
+//
+                    columns: [
+                        { text: 'Name', datafield: 'name', width: 250,pinned: true },
+                        { text: 'Beverage Type', datafield: 'type', width: 250,cellsalign: 'center' },
+                        { text: 'Calories', datafield: 'calories', width: 180,cellsalign: 'center' },
+                        { text: 'Total Fat', datafield: 'totalfat', width: 120 ,cellsalign: 'center'},
+                        { text: 'Protein', datafield: 'protein', minwidth: 120 ,cellsalign: 'center'}
+                    ]
+//                $("#jqxgrid").jqxGrid(
+//                {
+//                    width: 850,
+//                    source: source,
+//                    sortable: true,
+//                    pageable: true,
+//                    autoheight: true,
+//                    columns: [
+//                        { text: 'Product Name', datafield: 'ProductName', width: 250, pinned: true },
+//                        { text: 'Category', datafield: 'CategoryID', width: 120, cellsalign: 'right' },
+//                        { text: 'Quantity Per Unit', datafield: 'QuantityPerUnit', width: 200, cellsalign: 'right' },
+//                        { text: 'Unit Price', datafield: 'UnitPrice', width: 120, cellsformat: 'c2', cellsalign: 'right' },
+//                        { text: 'Units On Order', datafield: 'UnitsOnOrder', width: 120, cellsalign: 'right' },
+//                        { text: 'Reorder Level', datafield: 'ReorderLevel', width: 120, cellsalign: 'right' }
+//                    ]
+//                });
+                });
+        });
+    </script>
+</head>
+<body class='default'>
+<div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+    <div id="jqxgrid"></div>
+</div>
+</body>
+<!--<link rel="bookmark" type="image/x-icon" href="https://rs.ingageapp.com/static/img/favicon.ico"/>-->
+<link rel="stylesheet" type="text/css" href="https://rs.ingageapp.com/static/deploy/rk1.css?05d1f38"/>
+<link rel="stylesheet" type="text/css" href="https://rs.ingageapp.com/static/gcss/lib/jqwidgets/styles/jqx.base.css?c9605a8"/>
+<link rel="stylesheet" type="text/css" href="https://rs.ingageapp.com/static/gcss/lib/jqwidgets/styles/jqx-base-rk-v2.css?93f5438"/>
+<link rel="stylesheet" type="text/css" href="https://rs.ingageapp.com/static/gcss/lib/jquery-ui/1.11.3/jquery-ui.css?4c82566"/>
+<link rel="stylesheet" type="text/css" href="https://rs.ingageapp.com/static/gcss/lib/jquery-ui/1.11.3/jquery-ui-rk.css?0fd4b38"/>
+<link rel="stylesheet" type="text/css" href="https://rs.ingageapp.com/static/deploy/rk2.css?5b718b0"/>
+</html>
